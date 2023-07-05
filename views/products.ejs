@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <%- include('partials/nav') %>
+
+    <div class="container mt-3">
+        <h1 style="display: flex; align-items: center; justify-content: center;">Welcome To <span style="border: 2px solid rgb(25, 91, 1) ;border-radius: 2px; background-color: rgb(25, 91, 1); color:white">Products</span><Procucts></Procucts></h1>
+
+        <div class="row">
+            <div class="col-12">
+                <% productsList.forEach(product=> { %>
+                    <%- include('partials/product',product) %>
+                    <% }) %>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

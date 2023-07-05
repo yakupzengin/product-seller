@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <%- include('partials/nav') %>
+    <div class="container mt-3">
+        <h1 style="display: flex; align-items: center; justify-content: center; border: 5px solid rgb(69, 68, 68); background-color: rgb(73, 72, 72); color:white">Welcome To Homepage</h1>
+        <div class="row">
+            <div class="col-12">
+                <% productsList.forEach(product=> { %>
+                    <% if (product.isHome) { %>
+                        <%- include('partials/product',product) %>
+                        <% } %>
+                    <% }) %>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
